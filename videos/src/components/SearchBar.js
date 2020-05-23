@@ -11,16 +11,19 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <div className="search-bar ui segment">
+      <div style={{ margin: "10px auto 30px auto"}}>
         <form onSubmit={this.onFormSubmit} className="ui form">
           <div className="field">
-            <label>Video Search</label>
-            <input
-              type="text"
-              className="form-control"
-              value={this.state.term}
-              onChange={(e) => this.setState({ term: e.target.value })}
-            />
+            <div className="ui icon input">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Search for videos"
+                value={this.state.term}
+                onChange={(e) => this.setState({ term: e.target.value })}
+              />
+              <i className="search icon"></i>
+            </div>
           </div>
         </form>
       </div>
